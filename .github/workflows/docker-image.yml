@@ -20,7 +20,7 @@ jobs:
       run: docker build -t yp522/react-cloud:latest .
 
     - name: Login to Docker Hub
-      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD --password-stdin
 
     - name: Publish Docker image
       run: docker push yp522/react-cloud:latest
